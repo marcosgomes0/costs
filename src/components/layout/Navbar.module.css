@@ -1,0 +1,36 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 1em;
+    align-items: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+.navList{
+    display: flex;
+    align-items: center;
+    list-style: none;   
+}
+.navbar li{
+    margin-right: 1em;  
+}
+.navbarli a {
+    color: white;
+    text-decoration: none;
+}
+.navbarli a:hover{
+    color: #ffbb33;
+}
+
+@media (max-width: 600px) {
+    .navbar{
+        flex-direction: column;
+    }
+    .navList{
+        margin-top: 20px;
+    }
+    .navbar li{
+        margin-right: 0.5em;  
+    }
+}

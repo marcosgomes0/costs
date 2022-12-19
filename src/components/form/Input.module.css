@@ -1,0 +1,17 @@
+.inputt{
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+}
+.inputt label{
+    margin-bottom: .5em;
+    font-weight: bold;
+}
+.inputt  input{
+    padding: .6em;
+    border-radius: 0px;
+    border: none;
+}
+.imputt input::placeholder{
+    color: #7b7b7b;
+}

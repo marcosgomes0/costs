@@ -1,0 +1,72 @@
+.project{
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 24%;
+    margin: 0.5%;
+}
+.project h4{
+    background-color: #222;
+    color: #ffbb33;
+    padding: 0.5em;
+    margin-bottom: 1.3em;
+    font-size: 1.3em;
+}
+.project p{
+    color: #7a7a7a;
+    margin-bottom: 1em;
+}
+.project > p > span{
+    font-weight: bold;
+}
+.category{
+    display: flex;
+    align-items: center;
+}
+.category span{
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #7a7a7a;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.category .infraestrutura{
+background-color: #FFABCD;
+}
+.category .design{
+background-color: #A0E7E5;
+
+}
+.category .desenvolvimento{
+background-color: #B4F8C8;
+}
+.category .planejamento{
+    background-color: #FBE7C6;
+
+}
+.actions{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+.actions a, .actions button{
+    margin: 10px;
+    text-decoration: none;
+    color: #222;
+    border: none;
+    font-size: 0.8em;
+    padding: 0.6em 1em;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid black;
+    transition: 300ms;
+
+}
+.actions a:hover, .actions button:hover{
+    background-color: #222;
+    color: #ffbb33;
+}
+.actions svg{
+    margin-right: 5px;
+}
