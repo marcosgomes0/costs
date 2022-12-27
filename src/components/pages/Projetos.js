@@ -5,8 +5,9 @@ import LinkButton from "../layout/LinkButton";
 import { useState, useEffect } from "react";
 import Loading from "../layout/Loading";
 import ProjectCards from "../layout/ProjectCards";
+import React from "react";
 
-function Projetos() {
+function Projetos({setHome}) {
   const location = useLocation();
   let message = "";
 
@@ -25,6 +26,14 @@ function Projetos() {
       setLoad(true)
     }, 500);
   }, []);
+
+  const loca = useLocation()
+
+React.useEffect(()=>{
+    if(loca.pathname !== "/"){
+        setHome(false)
+    }
+},[loca, setHome])
 
   function removeProject(id) {
     const data = JSON.parse(localStorage.getItem("projects"))

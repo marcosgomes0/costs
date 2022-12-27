@@ -8,8 +8,10 @@ import Message from "../layout/Message";
 import ServiceForm from "../service/ServiceForm";
 import { v4 as uuidv4 } from "uuid";
 import ServiceCard from "../service/ServiceCard";
+import { useLocation } from "react-router-dom";
+import React from "react";
 
-function Projeto() {
+function Projeto({setHome}) {
   const { id } = useParams();
   const [project, setProject] = useState([]);
   const [services, setServices] = useState([]);
@@ -26,6 +28,15 @@ function Projeto() {
       setServices(projeto[id].services);
     }, 500);
   }, [id]);
+
+  const loca = useLocation()
+
+React.useEffect(()=>{
+    if(loca.pathname !== "/"){
+        setHome(false)
+    }
+},[loca, setHome])
+
 
   function toggleProjectForm() {
     setShowProjectForm(!showProjectForm);
@@ -45,7 +56,6 @@ function Projeto() {
     if (Number(modifyProject.valor) < modifyProject.cost) {
       setMessage("O orçamento não pode ser menor que o custo do projeto!");
       setType("failed");
-      console.log("error");
       return false;
     }
 
@@ -58,12 +68,10 @@ function Projeto() {
 
   function createService(project) {
     setMessage("");
-    console.log(project);
     const lastService = project.services[project.services.length - 1];
     lastService.id = uuidv4();
 
     const lastServiceCost = Number(lastService.cost);
-    console.log(lastServiceCost);
 
     const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost);
 

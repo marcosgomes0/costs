@@ -22,7 +22,6 @@ useEffect(()=>{
 }, [])
 
 const submit = (e) => {
-    console.log(project)
     e.preventDefault()
     handleSubmit([...preData, project])
 }

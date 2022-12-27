@@ -1,8 +1,10 @@
 import styles from './NewProject.module.css'
 import ProjectForm from '../layout/ProjectForm'
 import { useNavigate } from 'react-router-dom'
-  
-function NewProject(){
+import { useLocation } from 'react-router-dom'  
+import React from 'react'
+
+function NewProject({setHome}){
    
    
 const navigate = useNavigate()
@@ -16,7 +18,13 @@ function createPost(project){
     navigate('/projetos')
 }
 
+const loca = useLocation()
 
+React.useEffect(()=>{
+    if(loca.pathname !== "/"){
+        setHome(false)
+    }
+},[loca, setHome])
 
  
     return(

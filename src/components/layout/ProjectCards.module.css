@@ -1,13 +1,10 @@
-
-
-
-.card{
+.card {
   border: 1px solid black;
   padding: 12px;
   border-radius: 4px;
 }
 
-.card > h3{
+.card > h3 {
   background-color: black;
   color: goldenrod;
   padding: 10px;
@@ -15,10 +12,10 @@
   margin-bottom: 10px;
 }
 
-.card span{
+.card span {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.card p{
+.card p {
   margin-bottom: 10px;
 }

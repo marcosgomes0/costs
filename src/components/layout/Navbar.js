@@ -13,12 +13,6 @@ function Navbar (){
         <li className={styles.navbarli}>
           <Link to="/projetos" >Projetos</Link>
         </li>
-        <li className={styles.navbarli}>
-          <Link to="/company" >Company</Link>
-        </li>
-        <li  className={styles.navbarli}>
-          <Link to="/contact">Contact</Link>
-        </li>
       </ul>
       </nav>
     )
